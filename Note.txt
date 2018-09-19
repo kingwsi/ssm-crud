@@ -1,0 +1,17 @@
+1、MVC
+	注解要写正确，@service @Controller
+	
+2、路径
+	不以"/"开始的路径是相对路径，以当前路径为基准，容易出现问题
+	以"/"开始的路径绝对路径，以服务器的路径为基准   --推荐使用，要加上项目名称(localhost:8080/ssm-crud)
+	<%
+    	pageContext.setAttribute("APP_PATH", request.getContextPath());
+    %>
+    	用${APP_PATH}取出
+3、contorller层返回JSON数据
+	@RequestMapping("/emps")
+	@ResponseBody   --返回值会自动转换为JSON
+	public PageInfo xxx(){}
+	
+3、常见错误Result Maps collection already contains value for com.blog.dao.BlogMapp......
+	因为MyBatis Generator生成会覆盖原有mapper
