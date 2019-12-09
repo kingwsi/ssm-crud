@@ -79,19 +79,19 @@ public class MapperTest {
     public void testSqlSession() {
         Param param = new Param();
         param.setEmpId(1);
-        Object selectOne = this.sqlSession.selectOne("", null);
-        System.out.print("09");
+        Object selectOne = this.sqlSession.selectOne("com.wang.crud.dao.DepartmentMapper.selectByPrimaryKey", param);
+        System.out.print(selectOne);
     }
 
     class Param {
-        Integer empId;
+        Integer deptId;
 
-        public void setEmpId(Integer empId) {
-            this.empId = empId;
+        public void setEmpId(Integer deptId) {
+            this.deptId = deptId;
         }
 
         public Integer getEmpId() {
-            return this.empId;
+            return this.deptId;
         }
     }
 }
