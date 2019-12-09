@@ -1,8 +1,5 @@
-SSM - CRUD基础演示
+### SSM - CRUD基础整合
 
-SSM框架搭建教程
+SSM框架整合
 
-```java
-hello java
-by ws
-```
+包含Pagehelper分页、JSR303校验、mybatis-generator代码生成
